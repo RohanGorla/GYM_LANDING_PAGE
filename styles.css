@@ -195,7 +195,7 @@ img {
 }
 
 .article-info {
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     font-size: var(--article-info);
     line-height: 2;
@@ -301,7 +301,7 @@ img {
 @media (min-width: 700px) {
     :root{
         --gym-name: 20px;
-        --header-title: 60px;
+        --header-title: 45px;
         --header-info: 16px;
         --join-btn-text: 18px;
         --article-title: 35px;
@@ -335,24 +335,9 @@ img {
         width: 40%;
         align-self: center;
     }
+}
 
-    /* ATMOSPHERE */
-
-    .atmosphere {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    .article-card {
-        width: 40%;
-        margin: 0;
-        padding: 5em 0;
-    }
-
-    .article-info {
-        text-align: left;
-        font-weight: 400;
-    }
+    @media (min-width:850px) {
 
     /* EQUIPMENT */
 
@@ -379,6 +364,51 @@ img {
         align-self: center;
     }
 
+    /* FOOTER */
+
+    .end-statement {
+        padding: 1em 0;
+    }
+}
+
+@media (min-width:1000px) {
+    :root{
+        --gym-name: 20px;
+        --header-title: 60px;
+        --header-info: 16px;
+        --join-btn-text: 18px;
+        --article-title: 35px;
+        --article-info: 18px;
+        --equipment-title: 30px;
+        --equipment-info: 18px;
+        --category-name: 28px;
+        --end-statement: 32px;
+        --contact-info: 16px;
+        --loc-info: 16px;
+    }
+    
+    /* ATMOSPHERE */
+
+    .atmosphere {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .article-card {
+        width: 40%;
+        margin: 0;
+        padding: 5em 0;
+    }
+
+    .article-title {
+        text-align: left;
+    }
+
+    .article-info {
+        text-align: left;
+        font-weight: 400;
+    }
+    
     /* PRICING */
 
     .pricing-details {
@@ -390,11 +420,5 @@ img {
         width: 30%;
         padding: 3em 1em;
         border-radius: 30px;
-    }
-
-    /* FOOTER */
-
-    .end-statement {
-        padding: 1em 0;
     }
 }
