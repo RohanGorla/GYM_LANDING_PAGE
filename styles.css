@@ -17,12 +17,13 @@
     --equipment-info: 16px;
     --category-name: 24px;
     --end-statement: 25px;
-    --loc-info: 14px
+    --contact-info: 14px;
+    --loc-info: 14px;
 }
 
 body {
-    background-color: black;
-    color: white;
+    /* background-color: black; */
+    /* color: white; */
     font-family: "Roboto Slab", serif;
     font-optical-sizing: auto;
     font-style: normal;
@@ -38,6 +39,81 @@ img {
     margin: 0 auto;
 }
 
+.not-visible {
+    visibility: hidden;
+    height: 0;
+}
+
+.contact-page {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.contact-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgb(36, 34, 34);
+    opacity: .8;
+}
+
+.contact-card {
+    position: relative;
+    background-color: black;
+    color: white;
+    width: 25%;
+    min-width: 280px;
+    padding: 2em 0;
+    border-radius: 40px;
+}
+
+.contact-card h2 {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.contact-card p {
+    text-align: center;
+    padding: .5em 0;
+}
+
+.close-btn {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.line-1 {
+    position: absolute;
+    display: block;
+    top: 14px;
+    left: 5px;
+    width: 20px;
+    height: 2px;
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+.line-2 {
+    position: absolute;
+    display: block;
+    top: 14px;
+    left: 5px;
+    width: 20px;
+    height: 2px;
+    transform: rotate(-45deg);
+    background-color: white;
+}
+
 .navbar{
     padding: 1em 0;
 }
@@ -48,18 +124,31 @@ img {
     font-size: var(--gym-name);
 }
 
-.header-title {
-    font-weight: 800;
-    text-align: center;
-    font-size: var(--header-title);
-    padding: .5em 0 .5em 0;
+.navbar {
+    background-color: black;
+    color: white;
+}
+
+/* HEADER */
+
+.header-box {
+    background-color: rgb(46, 44, 44);
 }
 
 .header {
     padding: 0 0 3em 0;
 }
 
+.header-title {
+    color: white;
+    font-weight: 800;
+    /* text-align: center; */
+    font-size: var(--header-title);
+    padding: .5em 0 .5em 0;
+}
+
 .header-info {
+    color: white;
     font-weight: 500;
     font-size: var(--header-info);
     padding: 0 0 1em 0;
@@ -70,15 +159,24 @@ img {
 }
 
 .join-btn-text {
+    color: white;
     font-size: var(--join-btn-text);
-    padding: .5em 1.3em;
+    font-weight: 600;
+    padding: .7em 1.3em;
     border-radius: 100px;
-    background-color: rgb(124, 80, 14);
+    background-color: rgb(15, 15, 14);
     cursor: pointer;
 }
 
 .join-btn-text:hover {
-    background-color: rgb(73, 46, 6);;
+    background-color: rgb(16, 16, 15);
+    color: red;
+}
+
+/* ATMOSPHERE */
+
+.atmosphere-box {
+    background-color: rgb(224, 213, 197);
 }
 
 .atmosphere {
@@ -101,6 +199,13 @@ img {
     text-align: center;
     font-size: var(--article-info);
     line-height: 2;
+}
+
+/* EQUIPMENT */
+
+.equipment-box {
+    background-color: rgb(46, 44, 44);
+    color: white;
 }
 
 .equipment {
@@ -130,6 +235,12 @@ img {
     padding: 1em 0;
 }
 
+/* PRICING */
+
+.pricing-box {
+    background-color: rgb(224, 213, 197);;
+}
+
 .pricing {
     padding: 1em 0 2em 0;
 }
@@ -142,6 +253,10 @@ img {
 
 .pricing-card {
     margin: 2.3em 0;
+    padding: 2em 1em;
+    border-radius: 30px;
+    background-color: rgb(39, 65, 89);
+    color: white;
 }
 
 .category-name {
@@ -157,8 +272,12 @@ img {
     margin: 1em 0;
 }
 
-.end {
-    padding: 1em 0 2em 0;
+/* FOOTER */
+
+.footer-box {
+    background-color: rgb(46, 44, 44);
+    color: white;
+    padding: 1em 0;
 }
 
 .end-statement {
@@ -176,4 +295,106 @@ img {
 .cont-info {
     padding: 1em 0;
     text-align: center;
+    font-size: var(--contact-info);
+}
+
+@media (min-width: 700px) {
+    :root{
+        --gym-name: 20px;
+        --header-title: 60px;
+        --header-info: 16px;
+        --join-btn-text: 18px;
+        --article-title: 35px;
+        --article-info: 18px;
+        --equipment-title: 30px;
+        --equipment-info: 18px;
+        --category-name: 28px;
+        --end-statement: 32px;
+        --contact-info: 16px;
+        --loc-info: 16px;
+    }
+
+    /* HEADER */
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        padding: 12em 0;
+    }
+
+    .header-main {
+        width: 50%;
+        align-self: center;
+    }
+
+    .header-title {
+        text-align: left;
+    }
+
+    .header-side {
+        width: 40%;
+        align-self: center;
+    }
+
+    /* ATMOSPHERE */
+
+    .atmosphere {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .article-card {
+        width: 40%;
+        margin: 0;
+        padding: 5em 0;
+    }
+
+    .article-info {
+        text-align: left;
+        font-weight: 400;
+    }
+
+    /* EQUIPMENT */
+
+    .equipment {
+        padding: 2em 0;
+    }
+
+    .equipment-card {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .card-two {
+        flex-direction: row-reverse;
+    }
+
+    .equipment-image {
+        width: 35%;
+        padding: 0;
+    }
+
+    .equipment-info {
+        width: 55%;
+        align-self: center;
+    }
+
+    /* PRICING */
+
+    .pricing-details {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .pricing-card {
+        width: 30%;
+        padding: 3em 1em;
+        border-radius: 30px;
+    }
+
+    /* FOOTER */
+
+    .end-statement {
+        padding: 1em 0;
+    }
 }
